@@ -20,7 +20,6 @@ Prompt Keeper is built with React and bootstrapped with Create React App. To get
 ```bash
 npm install
 ```
-To start the development server and open the extension in a browser:
 
 ## Building for Production
 To build the extension for production deployment:
