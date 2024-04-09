@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "LLM Prompt Saver",
+  "version": "1.0",
+  "description": "Save LLM prompts with ease.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "public/index.html"
+  },
+  "icons": {
+    "16": "images/icon16v2.png",
+    "48": "images/icon48v2.png",
+    "128": "images/icon128v2.png"
+  }
+}
+

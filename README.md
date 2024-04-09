@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Prompt Keeper Browser Extension
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Prompt Keeper browser extension is a handy tool allows you to save, edit, delete, and copy text snippets or prompts directly from your browser, enhancing your productivity and workflow.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Save Snippets**: Quickly save any text snippet for later use.
+- **Edit Snippets**: Easily edit your saved snippets.
+- **Delete Snippets**: Remove snippets you no longer need.
+- **Copy Snippets**: One-click copying of snippets to your clipboard.
+- **Dark Theme**: A sleek, dark-themed UI that's easy on the eyes.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Prompt Keeper is built with React and bootstrapped with Create React App. To get started with development or customization:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository to your local machine.
+2. Navigate to the project directory and install dependencies:
 
-### `npm test`
+```bash
+npm install
+```
+To start the development server and open the extension in a browser:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Building for Production
+To build the extension for production deployment:
 
-### `npm run build`
+```bash
+npm run build
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This command optimizes the build for the best performance, bundling React in production mode. The build output will be located in the build folder.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Loading the Extension in Chrome
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Build the extension using the `npm run build` command.
+2. Open Chrome and navigate to `chrome://extensions/`.
+3. Enable "Developer mode" at the top right.
+4. Click "Load unpacked" and select the `build` folder of your project.
+5. The extension should now be installed and visible in your browser toolbar.
 
-### `npm run eject`
+## Contributing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Contributions are welcome! If you have suggestions for improvements or encounter any issues, please feel free to submit an issue or pull request on GitHub.
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+For more information on React and Create React App:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [React documentation](https://reactjs.org/)
+- [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started)
 
-### Code Splitting
+Thank you for using or contributing to Prompt Keeper!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
