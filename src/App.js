@@ -6,7 +6,7 @@ const App = () => {
     const [snippets, setSnippets] = useState([]);
     const [newSnippet, setNewSnippet] = useState('');
     const [editingIndex, setEditingIndex] = useState(-1);
-    const [inputError, setInputError] = useState(false); // New state variable
+    const [inputError, setInputError] = useState(false);
 
     useEffect(() => {
         // Load the saved snippets from chrome.storage.local on mount
