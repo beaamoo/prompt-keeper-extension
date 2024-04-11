@@ -6,6 +6,7 @@ const App = () => {
     const [snippets, setSnippets] = useState([]);
     const [newSnippet, setNewSnippet] = useState('');
     const [editingIndex, setEditingIndex] = useState(-1);
+    const [inputError, setInputError] = useState(false);
 
     useEffect(() => {
         // Load the saved snippets from chrome.storage.local on mount
@@ -17,6 +18,15 @@ const App = () => {
     }, []);
 
     const saveSnippet = () => {
+        // Check if newSnippet is empty
+        if (!newSnippet.trim()) {
+            // newSnippet is empty or only contains whitespace, so return early
+            setInputError(true); // Set inputError to true
+            return;
+        }
+
+        setInputError(false); // Reset inputError if newSnippet is not empty
+
         const updatedSnippets = [...snippets];
 
         if (editingIndex >= 0) {
@@ -27,7 +37,6 @@ const App = () => {
             // Add a new snippet
             updatedSnippets.push(newSnippet);
         }
-
         // Save the snippets to chrome.storage.local
         chrome.storage.local.set({ snippets: updatedSnippets }, () => {
             setSnippets(updatedSnippets);
@@ -66,9 +75,12 @@ const App = () => {
             <div className="input-section">
                 <input
                     type="text"
-                    placeholder="Enter text here"
+                    placeholder={inputError ? "Cannot have an empty text field" : "Enter text here"} // Change placeholder text based on inputError
                     value={newSnippet}
-                    onChange={(e) => setNewSnippet(e.target.value)}
+                    onChange={(e) => {
+                        setNewSnippet(e.target.value);
+                        setInputError(false); // Reset inputError when user types in the input field
+                    }}
                     className="input-field"
                 />
                 <button onClick={saveSnippet} className="save-button">
