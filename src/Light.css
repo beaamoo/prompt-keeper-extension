@@ -1,4 +1,5 @@
 html, body {
+    border: none;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5; /* Light background color */
@@ -8,7 +9,6 @@ html, body {
     max-height: 500px; /* Set a fixed max height for your popup */
     width: 300px; /* Set a fixed width for your popup */
     overflow-y: auto; /* Enables vertical scrolling */
-    margin: 5px;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f5f5f5; /* Light background for the app */
