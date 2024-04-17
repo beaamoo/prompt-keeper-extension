@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
+import './Dark.css';
+import './Light.css';
 import logoImage from './logo.png';
 
 const App = () => {
@@ -7,6 +8,11 @@ const App = () => {
     const [newSnippet, setNewSnippet] = useState('');
     const [editingIndex, setEditingIndex] = useState(-1);
     const [inputError, setInputError] = useState(false);
+    const [theme, setTheme] = useState('dark');
+
+    const toggleTheme = () => {
+        setTheme(theme === 'dark' ? 'light' : 'dark');
+    };
 
     useEffect(() => {
         // Load the saved snippets from chrome.storage.local on mount
@@ -70,7 +76,16 @@ const App = () => {
     };
 
     return (
-        <div className="app">
+        <div className={`app ${theme}`}>
+            <input
+                type="checkbox"
+                id="theme-toggle"
+                className="theme-toggle-button"
+                checked={theme === 'dark'}
+                onChange={toggleTheme}
+            />
+            <label htmlFor="theme-toggle" className="theme-toggle-label">
+            </label>
             <img src={logoImage} alt="Logo" className="logo"/>
             <div className="input-section">
                 <input
