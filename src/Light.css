@@ -1,0 +1,128 @@
+html, body {
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Light background color */
+}
+
+.app.light {
+    max-height: 500px; /* Set a fixed max height for your popup */
+    width: 300px; /* Set a fixed width for your popup */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Light background for the app */
+    color: #333; /* Dark text */
+}
+
+.logo {
+    display: block;
+    max-width: 200px; /* Adjust based on your preference */
+    margin: 5px auto 5px; /* Centers the image and adds some margin below */
+}
+
+.input-section, .list-section {
+    margin-bottom: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.app.light .input-field {
+    width: calc(100% - 30px);
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd; /* Light border color */
+    border-radius: 4px;
+    background-color: #fff; /* Light background for input */
+    color: #333; /* Dark text */
+}
+
+.save-button, .edit-button, .delete-button {
+    padding: 10px 15px;
+    margin: 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff; /* White text for buttons */
+}
+
+.save-button {
+    background-color: #28b85d;
+}
+
+.edit-button, .delete-button {
+    background-color: #ddd; /* Light background for buttons */
+    color: #333; /* Dark text for buttons */
+}
+
+.snippet-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.snippet-button {
+    width: 100%;
+    max-width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 10px;
+    border: 1px solid #ddd; /* Light border for button */
+    border-radius: 4px;
+    background-color: #ddd; /* Light background for button */
+    text-align: left;
+    cursor: pointer;
+    color: #333; /* Dark text */
+}
+
+.snippet-button:hover {
+    background-color: #eee; /* Lighter background for hover */
+}
+
+.theme-toggle-button {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-toggle-label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-toggle-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.2s;
+}
+
+.theme-toggle-label::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.theme-toggle-button:checked + .theme-toggle-label::before {
+    background-color: #2196F3;
+}
+
+.theme-toggle-button:checked + .theme-toggle-label::after {
+    transform: translateX(26px);
+}
